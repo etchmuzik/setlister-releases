@@ -1,0 +1,53 @@
+name: Report a problem
+description: Help us reproduce a SETLISTER problem.
+title: '[Bug] '
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for testing SETLISTER. English and Arabic reports are welcome.
+        This report is public. Do not attach music files, passwords, or private file paths.
+  - type: input
+    id: version
+    attributes:
+      label: App version
+      description: For desktop, find the version in About SETLISTER. For the website, enter "browser".
+    validations:
+      required: true
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Platform
+      options:
+        - Mac desktop
+        - Windows desktop
+        - Browser
+    validations:
+      required: true
+  - type: input
+    id: system
+    attributes:
+      label: Operating system and browser
+      placeholder: e.g. Windows 11, or macOS 15 with Safari
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: What did you do just before the problem?
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected result
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual result
+      description: Include any error message. Remove private details from screenshots.
+    validations:
+      required: true
